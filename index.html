@@ -3,17 +3,27 @@
 <!--w3schools.com-->
 <html>
   <head>
-    <title>Ossin sivu</title>
+    <style type="text/css">
+      #otsikko_etusivu{
+        background-color:black;
+        color:white;
+        text-align:center;
+        padding:10px;
+      }
+    </style>
+    <title>Ossin sivut</title>
   </head>
   <body>
+    <header id="otsikko_etusivu">
+      Mun sivut - etusivu
+    </header>
     <h1>Eka otsikko</h1>
+    <p><a href="portfolio/portfolio.html">Portfolio</a></p>
+    <p><a href="blogi.html">Blogi</a></p>
     <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi odit commodi quae illum porro! <br/>Obcaecati qui esse fugiat iure. Dolorum totam quibusdam repellat, quia aliquid eum. Laudantium corrupti quaerat similique?
-    </p>
+      <abbr title="World Wide Web">WWW</abbr> ohjelmointi on kivaa. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi odit commodi quae illum porro! <br/>Obcaecati qui esse fugiat iure. Dolorum totam quibusdam repellat, quia aliquid eum. Laudantium corrupti quaerat similique?</p>
     <hr />
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus molestiae alias vero excepturi dolore blanditiis ipsam recusandae autem aliquam aliquid consequuntur hic, voluptatibus quisquam quibusdam expedita! Quibusdam, consectetur doloremque.
-    </p>
+    <blockquote cite="www.salpaus.fi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus molestiae alias vero excepturi dolore blanditiis ipsam recusandae autem aliquam aliquid consequuntur hic, voluptatibus quisquam quibusdam expedita! Quibusdam, consectetur doloremque.</blockquote>
     <h2>Toinen otsikko</h2>
     <h3>Kolmas otsikko</h3>
     <h4>Neljäs otsikko</h4>
@@ -31,8 +41,7 @@
     </ol>
     <table border="1px">
       <tr>
-        <th>Eka otsikko</th
-        >
+        <th>Eka otsikko</th>
         <th>Toka otsikko</th>
         <th>Kolmas otsikko</th>
       </tr>
@@ -50,12 +59,43 @@
       </tr>
     </table>
     <a href="http://google.com" target="_blank">Google</a>
+    <p>
+      Teksti voi olla <b>Boldattua</b> tai <em>Kursivoitua</em>
+    </p>
     <br>
     <a href="linkkiharjoitus.html">
     <img src="tietokeskus-kirjahylly.jpg" width="100" alt="kuva-kirjahyllystä"/>
     </a>
-    <p>
-      Teksti voi olla <b>Boldattua</b> tai <em>Kursivoitua</em>
-    </p>
+    <form action="" method="">
+      <label>Etunimi</label> 
+      <input type="text" placeholder="Kirjoita etunimi"><br><br>
+      <label>Sukunimi</label> 
+      <input type="text" placeholder="Kirjoita etunimi"><br><br>
+      <label>Sähköposti</label> 
+      <input type="email"><br><br>
+      <label>Ikä</label> 
+      <input type="number"><br><br>
+      <label>Tänään</label> 
+      <input type="date"><br><br>
+      <label>Tekstikenttä</label> 
+      <textarea></textarea><br><br>
+      <label>Automerkki</label>
+      <select>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Saab">Saab</option>
+      </select>
+      <select multiple size="3">
+        <option value="Hyundai">Hyundai</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Saab">Saab</option>
+      </select><br>
+      <input type="checkbox" id="Hyundai"value="Hyundai">
+      <label for="Hyundai">Hyundai</label><br>
+      <input type="checkbox" id="Volvo"value="Volvo">
+      <label for="Volvo">Volvo</label><br>
+      <input type="checkbox" id="Saab"value="Saab">
+      <label for="Saab"">Saab</label><br>
+    </form>
   </body>
 </html>
