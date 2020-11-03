@@ -1,8 +1,16 @@
+body{
+  font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin:0;
+  font-size:12px;
+  color:#000000;
+  background-color:#dbdbdb;
+}
 #otsikko_contact{
   background-color:black;
   color:white;
   text-align:center;
-  padding:10px;     
+  padding:15px;
+  font-size:150%;
   margin:0px;
   top:0px;   
 }
@@ -10,17 +18,23 @@
   background-color:black;
   color:white;
   text-align:center;
-  padding:10px;
-  margin:0;
-  top: 0;  
+  padding:15px;
+  font-size:150%;
+  margin:0px;
+  top:0px;  
+}
+.alue{
+  align-self: center;
+  width:70%;
+  margin:auto;
 }
 .opinnot table {
   border-collapse: separate;
   border-spacing:0;
   border:solid black 1px;
+  background-color:#ffffff;
   width: 100%;
   border-radius:20px;
-  -moz-border-radius:20px;
 }
 .opinnot td, th {
   border-left:solid black 1px;
@@ -29,7 +43,7 @@
   padding: 10px;
 }
 .opinnot th {
-  background-color: #d3d3d3;
+  background-color: #8b8b8b;
   border-top:none;
 }
 .opinnot td:first-child, th:first-child{
@@ -41,57 +55,98 @@
 .opinnot th:last-child{
   border-top-right-radius: 20px;
 }
-.liikkuva{
-  position: fixed;
-  top:200px;
-  right:0;
-}
-.nappi {
-  background-color:black;
-  color:white;
-  padding:10px;
-  border:none;
-  border-radius:10px;
-  outline:none;
-  text-decoration:none;
-}
-.nappi:hover{
-  background-color:#000000;
-  color:#ff0000;
-}
-.nappi:active{
-  transform:scale(0.9,0.9);
+.sisaltoa1{
   color:#ffffff;
+  background-image:url(/portfolio/näppis.jpg);
+  background-size:cover;
+  background-color:#757575;
+  padding:20px;
+  border-style:1px solid;
+  border-radius:20px
 }
-.navigointi{
-  text-align:center;
+.sisaltoa1 a{
+  color:#ffffff;
+  font-weight:bold;
+}
+.lisatieto{
+  color:#000000;
+  background-color:#ffffff;
+  padding:20px;
+  border-style:1px solid;
+  border-radius:20px
+}
+.contact_alue{
+  background-color:#ffffff;
+  border-radius:20px;
+  padding:20px;
+  border:5px;
+  border-style:double;
+}
+.contact label{
+  display: block;
+}
+.contact input[type=text], input[type=number],input[type=email], input[type=date], textarea, select, input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.contact input[type="text"], .yhteydenotto textarea{
+  width:100%;
 }
 .navigointi ul {
+  text-align:center;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 16%;
+  width: fit-content;
   color:#ffffff;
   background-color: #000000;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   position: fixed;
-  top:200px;
+  top:40%;
   right:0;
-  height: fit-content;
-  overflow: auto;
+  border:solid black 1px;
+  height:fit-content;
 }
 .navigointi li a {
   display: block;
+  border:none;
   color:#ffffff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   padding: 8px 16px;
-  text-decoration:underline #ffffff dashed;
+  text-decoration:underline dashed;
   text-decoration-skip-ink: none;
 }
+.navigointi li a:hover{
+  color:#ff0000
+}
 .navigointi li a:active{
-  color:#ff0000;
+  color:#ffffff;
 }
 .navigointi li a.active {
   background-color:#757575;
 }
 .navigointi li a:hover:not(.active) {
   background-color: #555;
+}
+.nappula {
+  background-color:black;
+  color:white;
+  padding:10px;
+  border:none;
+  text-decoration: none;
+  border-radius:10px;
+  outline:none;
+}
+.nappula:hover{
+  color:#ff0000;
+}
+.nappula:active{
+  transform:scale(0.9,0.9);
+  color:#ffffff;
 }
