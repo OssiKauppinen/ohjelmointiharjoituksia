@@ -1,0 +1,97 @@
+#otsikko_contact{
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:10px;     
+  margin:0px;
+  top:0px;   
+}
+#otsikko_portfolio{
+  background-color:black;
+  color:white;
+  text-align:center;
+  padding:10px;
+  margin:0;
+  top: 0;  
+}
+.opinnot table {
+  border-collapse: separate;
+  border-spacing:0;
+  border:solid black 1px;
+  width: 100%;
+  border-radius:20px;
+  -moz-border-radius:20px;
+}
+.opinnot td, th {
+  border-left:solid black 1px;
+  border-top:solid black 1px;
+  text-align: left;
+  padding: 10px;
+}
+.opinnot th {
+  background-color: #d3d3d3;
+  border-top:none;
+}
+.opinnot td:first-child, th:first-child{
+  border-left:none;
+}
+.opinnot th:first-child{
+  border-top-left-radius: 20px;
+}
+.opinnot th:last-child{
+  border-top-right-radius: 20px;
+}
+.liikkuva{
+  position: fixed;
+  top:200px;
+  right:0;
+}
+.nappi {
+  background-color:black;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  outline:none;
+  text-decoration:none;
+}
+.nappi:hover{
+  background-color:#000000;
+  color:#ff0000;
+}
+.nappi:active{
+  transform:scale(0.9,0.9);
+  color:#ffffff;
+}
+.navigointi{
+  text-align:center;
+}
+.navigointi ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 16%;
+  color:#ffffff;
+  background-color: #000000;
+  position: fixed;
+  top:200px;
+  right:0;
+  height: fit-content;
+  overflow: auto;
+}
+.navigointi li a {
+  display: block;
+  color:#ffffff;
+  padding: 8px 16px;
+  text-decoration:underline #ffffff dashed;
+  text-decoration-skip-ink: none;
+}
+.navigointi li a:active{
+  color:#ff0000;
+}
+.navigointi li a.active {
+  background-color:#757575;
+}
+.navigointi li a:hover:not(.active) {
+  background-color: #555;
+}
