@@ -1,4 +1,10 @@
 //alert('Täällä ollaan');
+
+
+function laskutehtava(ekaNumero, tokaNumero){
+  console.log(ekaNumero + tokaNumero);
+}
+
 console.log('Täällä ollaan');
 /*Monta
 riviä
@@ -101,3 +107,28 @@ const laksyTehtava = laksyt.map(function(laksy){
 });
 
 console.log(laksyTehtava);
+
+console.log('--------------');
+
+const tehtavaTehty = laksyt.filter(function(laksy){
+  return laksy.tehty === false;
+}).map(function(laksy){
+  return laksy.tehtava;
+});
+
+console.log(tehtavaTehty);
+
+const numero = 17;
+
+if(numero < 18 || nimi === 'Jorma'){
+  console.log('Olet alaikäinen tai Jorma. Et ole tervetullut.');
+}else if(numero === 18){
+  console.log('Onnea, olet juuri tullut täysi-ikäiseksi');
+}else{
+  console.log('Olet täysi-ikäinen')
+}
+
+const access = numero > 18 ? 'granted' : 'denied';
+console.log(access);
+
+laskutehtava(1, 2);
