@@ -101,3 +101,66 @@ body{
   top:100px;
   left:0;
 }
+ul{
+  list-style:none;
+}
+ul li{
+  padding:5px;
+  background:#ffc2f7;
+  margin:5px 0px;
+}
+header{
+  background:#ffc2f7;
+  padding:10px;
+  text-align:center;
+}
+#opiskelija-lomake{
+  background:#ffc2f7;
+  padding:15px;
+  display:block;
+}
+#opiskelija-lomake input[type='text']{
+  width:100%;
+  display:block;
+  padding:8px;
+  margin-bottom:10px;
+  border-radius:5px;
+  border:1px solid #7a006a;
+}
+.kurssinappi{
+  display: block;
+  width: 100%;
+  padding:10px 15px;
+  border:0;
+  background:#6D6D6D;
+  color:#fff;
+  border-radius:5px;
+  margin:5px 0;
+}
+.kurssinappi:hover{
+  background:#808080;
+}
+.merkinta{
+  display: block;
+  width: 100%;
+  padding:10px 15px;
+  border:0;
+  background:#6D6D6D;
+  color:#fff;
+  border-radius:5px;
+  margin:5px 0;
+}
+.merkinta:hover{
+  background:#808080;
+}
+.lomake-alue{
+  padding:10px 15px;
+  width: 70%;
+  margin:auto;
+}
+.virhe{
+  background:#d10000;
+  color:#fff;
+  padding:10px;
+  margin:0px;
+}
