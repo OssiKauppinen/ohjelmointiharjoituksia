@@ -150,3 +150,21 @@ body{
   transform:scale(0.9,0.9);
   color:#ffffff;
 }
+.laatikko{
+  float: left;
+  width:25%;
+  font-size: 15px;
+  height:200px;
+  border:2px solid black;
+  padding:10px;
+  box-sizing:border-box;
+  margin-top:25px;
+}
+.laatikko img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.laatikko:first-child{
+  border-top-left-radius: 20px;
+}
