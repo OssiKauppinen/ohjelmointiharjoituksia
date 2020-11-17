@@ -7,6 +7,7 @@
     <title>Ota yhteyttä</title>
   </head>
   <body>
+    <script src="javas.js"></script>
     <header id="otsikko_contact">
       Ossi Kauppinen - Ota yhteyttä
     </header>
@@ -15,15 +16,17 @@
       <div class="contact_alue">
       <div class="contact">
         <h3>Yhteydenotto</h3>
-        <form action="" method="">
+        <div class="virheilmoitus"></div>
+        <div class="kiitosilmoitus"></div>
       </div>
+      <form action="" method="POST">
       <div class="contact">
         <label>Nimi</label> 
-          <input type="text" placeholder="Kirjoita koko nimesi">
+          <input type="text" id="nimi" placeholder="Kirjoita koko nimesi">
       </div><br><br>
       <div class="contact">
         <label>Sähköposti</label> 
-          <input type="email" placeholder="esim. sähköposti@gmail.com">
+          <input type="email" id="sposti" placeholder="esim. sähköposti@gmail.com">
       </div><br><br>
       <div class="contact">
         <label>Puh. numero</label> 
@@ -49,7 +52,8 @@
             <option value="En halua">En halua, että minuun otetaan yhteyttä</option>
           </select><br><br>
       </div>
-        <input class="nappula" type="submit" value="Lähetä">
+        <input class="nappula" id="laheta" type="submit" value="Lähetä">
+      </form>
       </div>
     </div>
     </div>
@@ -71,8 +75,8 @@
       <div class="laatikko">
         <h2>Uutiset</h2>
         <ul>
-          <li>Ossi Kauppinen</li>
-          <li>0407455099</li>
+          <li>Uutinen 1</li>
+          <li>Uutinen 2</li>
         </ul>
       </div>
       <div class="laatikko">

@@ -22,6 +22,7 @@
     <title>Ossi - Portfolio</title>
   </head>
   <body>
+    <script src="javas.js"></script>
     <header id="otsikko_portfolio">
       Ossi Kauppinen - Portfolio
     </header>
@@ -86,9 +87,23 @@
         <li><a href="contact.html">Ota yhteyttä</a></li>
         <li><a href="/index.html">Etusivu</a></li>
         <li><a href="/blogi.html">Blogi</a></li>
+        <li><a id="asetus" href="#" onclick="naytaValikko();return false;">Asetukset</a></li>
+      <div id="valinta" style="display:none;">
+        Teema:<br>
+        <input type="radio" name="theme" onClick="">Vaalea<br>
+        <input type="radio" name="theme" onClick="">Tumma<br>
+        <input type="radio" name="theme" onClick="">Sateenkaari<br><br>
+        <a id="vaihda" href="#" onclick="naytaValikko();return false;">Vaihda teema</a>
+      </div>
       </ul>
     </div><br>
     <h3><a class="nappula" href="contact.html">Ota yhteyttä</a></h3>
     </div>
   </body>
 </html>
+<!--div id="myDiv" style="display:none;" class="answer_list" >
+      <input type="radio" name="theme" value="radio" onClick="lightMode()">Vaalea
+      <input type="radio" name="theme" value="radio" onClick="changeColour('t')">Tumma
+      <input type="radio" name="theme" value="radio" onClick="changeColour('r')">Sateenkaari
+    </div>
+    <input type="button" name="answer" value="Nappi" onclick="ShowDiv()"-->

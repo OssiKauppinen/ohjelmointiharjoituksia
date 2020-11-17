@@ -3,11 +3,11 @@ body{
   margin:0;
   font-size:12px;
   color:#000000;
-  background-color:#dbdbdb;
+  background-color: #cecece;
 }
 #otsikko_contact{
-  background-color:black;
-  color:white;
+  background-color:#000;
+  color:#fff;
   text-align:center;
   padding:15px;
   font-size:150%;
@@ -167,4 +167,36 @@ body{
 }
 .laatikko:first-child{
   border-top-left-radius: 20px;
+}
+#valinta{
+  text-align:left;
+  background-color:#313131;
+  border-bottom-left-radius: 15px;
+  padding:5px;
+  margin-bottom:5px;
+}
+#vaihda{
+  background-color:black;
+  color:white;
+  padding:6px;
+  margin:5px;
+  border:none;
+  text-decoration: none;
+  border-radius:15px;
+  outline:none;
+}
+#vaihda:hover{
+  color:#ff0000;
+}
+.virhe{
+  background:#d10000;
+  color:#fff;
+  padding:10px;
+  margin:0px;
+}
+.kiitos{
+  background:#000000;
+  color:#fff;
+  padding:10px;
+  margin:0px;
 }
