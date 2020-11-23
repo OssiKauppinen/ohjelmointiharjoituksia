@@ -25,20 +25,6 @@ function sendJSON(){
     }
   };
   var data = JSON.stringify({
-    "EmailMsg": "Viestin sisältö", // Kirjoittaa spostin sisällön
-    "EmailAddress": "ossi.kauppinen@salpaus.fi", // Viestin kirjoittajan sposti
-    "EmailTo": "ossi.o.kauppinen@gmail.com", // Oma spostini
-    "EmailName": "ossi" // Nimikentän sisältö
-  });
-  xhr.send(data);
-};
-
-
-
-
-
-/*
-var data = JSON.stringify({
     "EmailMsg": `${viestiKentta}`, // Kirjoittaa spostin sisällön
     "EmailAddress": `${emailKentta}`, // Viestin kirjoittajan sposti
     "EmailTo": "ossi.o.kauppinen@gmail.com", // Oma spostini
@@ -46,7 +32,7 @@ var data = JSON.stringify({
   });
   xhr.send(data);
 };
-
+/*
 const lahetysnappi = document.querySelector('.lahetanappi');
 const nimiSisalto = document.querySelector('#nimi');
 const postiSisalto = document.querySelector('#email');
