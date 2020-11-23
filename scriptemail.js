@@ -1,15 +1,35 @@
 //console.log("Scripti toimii");
+const virhe = document.querySelector('.virheilmoitus');
+const kiitos = document.querySelector('.kiitosilmoitus');
 
 const emailnappi = document.querySelector('.lahetanappi');
 
 emailnappi.addEventListener('click', e => {
   e.preventDefault();
-  sendJSON();
-});
 
-const nimiKentta = document.querySelector('#nimi')
-const emailKentta = document.querySelector('#email')
-const viestiKentta = document.querySelector('textarea')
+  if(nimiKentta.value === '' || emailKentta.value === '' || viestiKentta.value === ''){
+    virhe.classList.add('virhe');
+    virhe.innerHTML = 'Täytä kaikki pakolliset kentät';
+    nimiKentta.style.borderColor = 'red';
+    emailKentta.style.borderColor = 'red';
+    viestiKentta.style.borderColor = 'red';
+  }else{
+  sendJSON();
+  kiitos.innerHTML = (`Kiitos yhteydenotostasi ${nimiKentta.value}`);
+  setTimeout(() => kiitos.innerHTML = "", 5000);
+  setTimeout(() => kiitos.classList.remove('kiitos'), 5000);
+  emailKentta.value = '';
+  virhe.classList.remove('virhe');
+  virhe.innerHTML = '';
+  kiitos.classList.add('kiitos');
+  nimiKentta.style.borderColor = 'black';
+  emailKentta.style.borderColor = 'black';
+  viestiKentta.style.borderColor = 'black';
+}});
+
+const nimiKentta = document.querySelector('#nimi');
+const emailKentta = document.querySelector('#email');
+const viestiKentta = document.querySelector('textarea');
 
 function sendJSON(){
   let xhr = new XMLHttpRequest();
@@ -32,14 +52,8 @@ function sendJSON(){
   });
   xhr.send(data);
 };
-/*
-const lahetysnappi = document.querySelector('.lahetanappi');
-const nimiSisalto = document.querySelector('#nimi');
-const postiSisalto = document.querySelector('#email');
-const virhe = document.querySelector('.virheilmoitus');
-const kiitos = document.querySelector('.kiitosilmoitus');
 
-lahetysnappi.addEventListener('click', e =>{
+/*lahetysnappi.addEventListener('click', e =>{
   e.preventDefault();
 
   if(nimiSisalto.value === '' || postiSisalto.value === ''){
