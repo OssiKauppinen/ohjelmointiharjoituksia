@@ -171,6 +171,12 @@ header{
   padding:10px;
   margin:0px;
 }
+.kiitos{
+  background:#000000;
+  color:#fff;
+  padding:10px;
+  margin:0px;
+}
 .lahetanappi{
   display: block;
   width: 100%;
