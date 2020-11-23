@@ -90,10 +90,12 @@
         <li><a id="asetus" href="#" onclick="naytaValikko();return false;">Asetukset</a></li>
       <div id="valinta" style="display:none;">
         Teema:<br>
-        <input type="radio" name="theme" onClick="">Vaalea<br>
-        <input type="radio" name="theme" onClick="">Tumma<br>
-        <input type="radio" name="theme" onClick="">Sateenkaari<br><br>
-        <a id="vaihda" href="#" onclick="naytaValikko();return false;">Vaihda teema</a>
+      <ul class="kurssi">
+        <li class="sisalto"><input type="radio" name="theme">Vaalea</li>
+        <li class="sisalto"><input type="radio" name="theme">Tumma</li>
+        <li class="sisalto"><input type="radio" name="theme">Sateenkaari</li>
+      </ul>
+      <input id="vaihda" type="submit" value="Merkkaa">
       </div>
       </ul>
     </div><br>
