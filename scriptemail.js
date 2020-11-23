@@ -23,7 +23,7 @@ function sendJSON(){
   var data = JSON.stringify({
     "EmailMsg": "Tähän tulee postin sisältö", // Kirjoittaa spostin sisällön
     "EmailAddress": "mira.vorne@salpaus.fi", // Viestin kirjoittajan sposti
-    "EmailTo": "ossi.kauppinen@edu.salpaus.fi", // Oma spostini
+    "EmailTo": "ossi.o.kauppinen@gmail.com", // Oma spostini
     "EmailName": "Teppo Tyyppi" // Nimikentän sisältö
   });
   xhr.send(data);
