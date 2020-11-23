@@ -28,7 +28,7 @@ function sendJSON(){
     "EmailMsg": `${viestiKentta}`, // Kirjoittaa spostin sisällön
     "EmailAddress": `${emailKentta}`, // Viestin kirjoittajan sposti
     "EmailTo": "ossi.o.kauppinen@gmail.com", // Oma spostini
-    "EmailName": `${viestiKentta}` // Nimikentän sisältö
+    "EmailName": `${nimiKentta}` // Nimikentän sisältö
   });
   xhr.send(data);
 }
