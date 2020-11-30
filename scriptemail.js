@@ -15,12 +15,16 @@ emailnappi.addEventListener('click', e => {
     viestiKentta.style.borderColor = 'red';
   }else{
   sendJSON();
-  kiitos.innerHTML = (`Kiitos yhteydenotostasi ${nimiKentta.value}`);
-  setTimeout(() => kiitos.innerHTML = "", 5000);
-  setTimeout(() => kiitos.classList.remove('kiitos'), 5000);
+  kiitos.innerHTML = (`Kiitos yhteydenotostasi ${nimiKentta.value}, viestisi on lähetetty.`);
+  setTimeout(() => kiitos.innerHTML = "", 30000);
+  setTimeout(() => kiitos.classList.remove('kiitos'), 30000);
+  nimiKentta.value = '';
   emailKentta.value = '';
+  viestiKentta.value = '';
   virhe.classList.remove('virhe');
   virhe.innerHTML = '';
+  emailnappi.disabled = true;
+  setTimeout(() => emailnappi.disabled = false, 30000);
   kiitos.classList.add('kiitos');
   nimiKentta.style.borderColor = 'black';
   emailKentta.style.borderColor = 'black';
@@ -52,24 +56,3 @@ function sendJSON(){
   });
   xhr.send(data);
 };
-
-/*lahetysnappi.addEventListener('click', e =>{
-  e.preventDefault();
-
-  if(nimiSisalto.value === '' || postiSisalto.value === ''){
-    virhe.classList.add('virhe');
-    virhe.innerHTML = 'Täytä kaikki pakolliset kentät';
-    nimiSisalto.style.borderColor = 'red';
-    postiSisalto.style.borderColor = 'red';
-  }else{
-  kiitos.innerHTML = (`Kiitos yhteydenotostasi ${nimiSisalto.value}`);
-  setTimeout(() => kiitos.innerHTML = "", 5000);
-  setTimeout(() => kiitos.classList.remove('kiitos'), 5000);
-  postiSisalto.value = '';
-  virhe.classList.remove('virhe');
-  virhe.innerHTML = '';
-  kiitos.classList.add('kiitos');
-  nimiSisalto.style.borderColor = 'black';
-  postiSisalto.style.borderColor = 'black';
-  lahetysnappi.value = 'Lähetä';
-}});*/
