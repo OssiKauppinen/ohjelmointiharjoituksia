@@ -39,21 +39,3 @@ getJSON('https://api.apify.com/v2/key-value-stores/jEFt5tgCTMfjJpLD3/records/LAT
     document.getElementById("kuollut").innerHTML = `Kuolleita: ${dead}`
   }
 });
-
-getJSON('https://api.apify.com/v2/datasets/BDEAOLx0DzEW91s5L/items?format=json&clean=1', function(err, data) {
-
-  if (err != null) {
-    console.error(err);
-  } else{
-    var date = data.lastUpdatedAtSource.split('T')[0];
-    var tapauksia = data.confirmedCases;
-
-    console.log(date);
-    console.log(tapauksia);
-  for(let i=0; i<tapauksia.length;i++){
-    console.log(tapauksia[i]);
-  }
-
-    //document.getElementById("kuollut").innerHTML = `Kuolleita: ${dead}`
-  }
-});

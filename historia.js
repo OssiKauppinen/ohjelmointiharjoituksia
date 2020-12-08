@@ -1,43 +1,42 @@
 var getJSON = function(url, callback) {
-  
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'json';
 
-  xhr.onload = function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
     
-    var status = xhr.status;
-    if (status == 200) {
-      callback(null, xhr.response);
-    } else {
-      callback(status);
-    }
-  };
-
-  xhr.send();
+    xhr.onload = function() {
+    
+        var status = xhr.status;
+        
+        if (status == 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status);
+        }
+    };
+    
+    xhr.send();
 };
 
-getJSON('https://api.apify.com/v2/datasets/BDEAOLx0DzEW91s5L/items?format=json&clean=1', function(err, data) {
-let taulukko = '<table style="border:1px solid black">'
-const historia = data.map(function(paiva){
 
-  if(paiva.confirmedCases != undefined){
-    console.log(`Confirmed: ${paiva.confirmedCases}`)
-    taulukko = taulukko + `<tr><td>Confirmed</td></tr>${paiva.confirmedCases}</td></tr>`;
-  }
-  if(paiva.tested != undefined){
-    console.log(`Tested: ${paiva.testedCases}`)
-    taulukko = taulukko + `<tr><td>Tested</td></tr>${paiva.testedCases}</td></tr>`;
-  }
-  if(paiva.infected != undefined){
-    console.log(`Infected: ${paiva.infected}`)
-    taulukko = taulukko + `<tr><td>Infected</td></tr>${paiva.infected}</td></tr>`;
-  }
-  else{
-    console.log('Ei dataa');
-    taulukko = taulukko + '<tr><td>Ei dataa</td><td>Ei dataa</td></td>'
-  }
-});
-taulukko = taulukko + '</table>'
-document.body.innerHTML=taulukko;
+getJSON('https://api.apify.com/v2/datasets/BDEAOLx0DzEW91s5L/items?format=json&clean=1', function(err, data){
+  let taulukko = `<table>`;
+  const historia = data.map(function(paiva){
+    //var date = data.lastUpdatedAtApify;
+    //console.log(`Koronavirus ${date.split('T')[0]}`);
+    if(paiva.confirmedCases != undefined){
+      taulukko = taulukko + `<tr><td>${(paiva.lastUpdatedAtApify).split('T')[0]}</td><td>Tapauksia:</td><td>${paiva.confirmedCases}</td></tr>`; 
+    }
+    else if(paiva.testedCases != undefined){
+      taulukko = taulukko + `<tr><td>${(paiva.lastUpdatedAtApify).split('T')[0]}</td><td>Testattuja:</td><td>${paiva.testedCases}</td></tr>`; 
+    }
+    else if(paiva.infected != undefined && paiva.lastUpdatedAtApify != undefined){
+      taulukko = taulukko + `<tr><td>${(paiva.lastUpdatedAtApify).split('T')[0]}</td><td>Tartuntoja:</td><td>${paiva.infected}</td></tr>`; 
+    }
+    else{
+      taulukko = taulukko + `<tr><td>Ei dataa</td><td>Ei dataa</td><td>Ei dataa</td></tr>`; 
+    }
+  });
+  taulukko = taulukko + `</table>`;
+  document.body.innerHTML = taulukko;
 });
